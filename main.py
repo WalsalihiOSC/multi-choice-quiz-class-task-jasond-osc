@@ -14,7 +14,7 @@ class CatGUI:
 
         r = 1
         for i in(adjective_list):
-            Radiobutton(f1, text=i, value=i, variable=self.result, command=self.display_choice).grid(column=1, row=r, sticky=W)
+            Radiobutton(f1, text=i, value=i, variable=self.result, command=self.display_result).grid(column=1, row=r, sticky=W)
             r += 1
 
         f1.pack()
@@ -22,7 +22,7 @@ class CatGUI:
         self.output_label = Label(parent, text=self.result.get())
         self.output_label.pack()
 
-    def display_choice(self):
+    def display_result(self):
         return
     
 if __name__ == "__main__":
