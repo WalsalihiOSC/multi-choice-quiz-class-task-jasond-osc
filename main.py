@@ -23,7 +23,10 @@ class CatGUI:
         self.output_label.pack()
 
     def display_result(self):
-        return
+        if self.result.get() == "Wellington":
+            self.output_label.configure(text="Correct")
+        else:
+            self.output_label.configure(text="Incorrect")
     
 if __name__ == "__main__":
     root = Tk()
